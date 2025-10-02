@@ -11,13 +11,13 @@ class RelatorioCSVTest {
 	@Test
     void deveExecutarFormatura() {
 		Byte[] data = {};
-        IServico servico = RelatorioFactory.gerarRelatorio("CSV");
+        IServico servico = RelatorioFactory.obterRelatorio("CSV");
         assertEquals("Dados processados!", servico.processaDados(data));
     }
 
     @Test
     void deveCancelarFormatura() {
-        IServico servico = RelatorioFactory.gerarRelatorio("CSV");
+        IServico servico = RelatorioFactory.obterRelatorio("CSV");
         assertEquals("relatorio.csv", servico.geraRelatorio());
     }
 

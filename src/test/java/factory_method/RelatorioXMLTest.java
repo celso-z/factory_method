@@ -11,13 +11,13 @@ class RelatorioXMLTest {
 	@Test
     void deveExecutarFormatura() {
 		Byte[] data = {};
-        IServico servico = RelatorioFactory.gerarRelatorio("XML");
+        IServico servico = RelatorioFactory.obterRelatorio("XML");
         assertEquals("Dados processados!", servico.processaDados(data));
     }
 
     @Test
     void deveCancelarFormatura() {
-        IServico servico = RelatorioFactory.gerarRelatorio("XML");
+        IServico servico = RelatorioFactory.obterRelatorio("XML");
         assertEquals("relatorio.xml", servico.geraRelatorio());
     }
 

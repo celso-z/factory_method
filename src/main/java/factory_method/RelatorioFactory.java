@@ -4,7 +4,7 @@ import service.IServico;
 
 public class RelatorioFactory {
 
-	public static IServico gerarRelatorio(String relatorio) {
+	public static IServico obterRelatorio(String relatorio) {
 		Class classe = null;
         Object objeto = null;
         try {

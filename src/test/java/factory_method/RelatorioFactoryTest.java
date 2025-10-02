@@ -11,7 +11,7 @@ class RelatorioFactoryTest {
 	 @Test
 	    void deveRetornarExcecaoParaServicoInexistente() {
 	        try {
-	            IServico servico = RelatorioFactory.gerarRelatorio("YAML");
+	            IServico servico = RelatorioFactory.obterRelatorio("YAML");
 	            fail();
 	        } catch (IllegalArgumentException e) {
 	            assertEquals("Serviço inexistente", e.getMessage());
@@ -21,7 +21,7 @@ class RelatorioFactoryTest {
 	    @Test
 	    void deveRetornarExcecaoParaServicoInvalido() {
 	        try {
-	            IServico servico = RelatorioFactory.gerarRelatorio("");
+	            IServico servico = RelatorioFactory.obterRelatorio("");
 	            fail();
 	        } catch (IllegalArgumentException e) {
 	            assertEquals("Serviço inválido", e.getMessage());
