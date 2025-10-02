@@ -8,7 +8,7 @@ public class RelatorioFactory {
 		Class classe = null;
         Object objeto = null;
         try {
-            classe = Class.forName("padroescriacao.factorymethod.Servico" + relatorio);
+            classe = Class.forName("factory_method.Relatorio" + relatorio);
             objeto = classe.newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException("Serviço inexistente");
